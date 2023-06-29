@@ -1,0 +1,102 @@
+
+
+ <style>
+    .DIV1{
+        display: none;
+    }
+    /* .cen{
+   
+} */
+.error{
+    padding-left:35;
+    color: red;
+}
+.fm-ca{
+    border-radius: 10%;
+    padding-left: 5%;
+    margin-left: 30%;
+    
+    width: 50%;
+    height: auto;
+  
+    background-color: rgb(152, 239, 206);
+    
+}
+.mybtn{
+    
+    margin-bottom: 3%;
+    padding-bottom: 2%;
+}
+.myline{
+    margin-right: 10%;
+}
+</style>
+
+   
+<div class="cen  fm-ca">
+    <form action="" name="myForm" novalidate>
+        <h1 class="text-white">🛺Customer Verification Form</h1>
+        <label for="">Full Name</label>
+        <input type="text" name="name" id="" ng-model="name" pattern="[a-zA-Z{1,}]" required><br>
+        <span ng-show="myForm.$submitted || myForm.name.$dirty"></span>
+
+        <span class="error" ng-show="myForm.name.$error.required"><i class="fa fa-exclamation-circle"></i>Name required</span><br>
+        
+        <span class="error" ng-show="myForm.name.$error.pattern"><i class="fa fa-exclamation-circle"></i>Name cannot be a number</span><br>
+        <hr class="myline">
+
+         <label for="">Gender</label>
+         <br>
+       
+         <label for="">Male</label>
+        <input type="radio" name="gender" id="" ng-model="gender" ng-value='" Female"'  required><br>
+         <label for="">Female</label>
+        <input type="radio" name="gender" id="" ng-model="gender" ng-value='" Male"'  required><br>
+
+        <span ng-show="myForm.$submitted || myForm.gender.$dirty"></span>
+
+        <span class="error" ng-show="myForm.gender.$error.required"><i class="fa fa-exclamation-circle"></i>Gender Required</span><br><br>
+<hr class="myline">
+         <label for="">Date of Birth</label>
+        <input type="date" name="date" id="" ng-model="date"  required><br>
+        <span ng-show="myForm.$submitted || myForm.date.$dirty"></span>
+
+        <span class="error" ng-show="myForm.date.$error.required"><i class="fa fa-exclamation-circle"></i>Date of Birth required</span><br><br>
+         <label for="">Address</label>
+       <textarea name="address"   ng-model="address" required></textarea>
+        <span ng-show="myForm.$submitted || myForm.address.$dirty"></span>
+
+        <span class="error" ng-show="myForm.name.$error.required"><i class="fa fa-exclamation-circle"></i>Address  required</span><br><br>
+<hr class="myline">
+         <label for="">Phone Number</label>
+        <input type="number" name="phone" id="" ng-model="phone" ng-minlength="0" ng-maxlength="10" required><br>
+        <span ng-show="myForm.$submitted || myForm.phone.$dirty"></span>
+
+        <span class="error" ng-show="myForm.phone.$error.required"><i class="fa fa-exclamation-circle"></i>Phone Number required</span>
+        <span class="error" ng-show="((myForm.phone.$error.minlength || myForm.phone.$erroe.maxlength)) && myForm.phone.$dirty"><i class="fa fa-exclamation-circle"></i>Phone Number Should be 10 Digits</span><br><br>
+<hr class="myline">
+         <label for="">Vechicle Brands</label>
+       <select name="brand" ng-model="brand"required>
+        <option value="brand">Nike</option>
+        <option value="brand">Puma</option>
+        <option value="brand">Sparky</option>
+        <option value="brand">Mufti</option>
+        
+
+       </select><br>
+        <span ng-show="myForm.$submitted || myForm.address.$dirty"></span>
+
+        <span class="error" ng-show="myForm.name.$error.required"><i class="fa fa-exclamation-circle"></i>Address  required</span><br><br>
+
+        
+        <div class="d-grid gap-2 col-6 mx-auto">
+  <button class="btn btn-primary mybtn" type="">submit</button>
+  
+</div>
+        
+    </form>
+
+
+</div>
+
+ 
